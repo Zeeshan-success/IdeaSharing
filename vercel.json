@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  
   "builds": [
     {
       "src": "index.js",
@@ -11,7 +11,12 @@
      
       "src": "/(.*)",
      
-      "dest": "dist/"
+      "dest": "dist/**"
+    },{
+     
+      "src": "/(.*)",
+     
+      "dest": "dist/index.html"
     }
   ]
 }
