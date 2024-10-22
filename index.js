@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const { Schema } = mongoose;
+const path = require("path");
 
 main().catch((err) => console.log(err));
 
@@ -23,8 +24,11 @@ const Idea = mongoose.model("Idea", Ideasharing);
 const server = express();
 
 server.use(express.json());
-server.use(express.static("dist"));
+server.use(express.static(path.resolve(__dirname, "dist")));
 server.use(cors());
+server.use("/create-idea", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+});
 
 // create
 server.post("/ideas", (req, res) => {
