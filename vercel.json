@@ -28,6 +28,11 @@
       "dest": "dist/index.html"
     },
     {
+      "src": "/create-idea",
+
+      "dest": "dist/index.html"
+    },
+    {
       "src": "/(.+)",
 
       "dest": "dist/$1"
