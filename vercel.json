@@ -16,11 +16,7 @@
 
       "dest": "dist/index.html"
     },
-    {
-      "src": "/ideas",
-
-      "dest": "index.js"
-    },
+   
     {
       "src": "/(.+)",
 
